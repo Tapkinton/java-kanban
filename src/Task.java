@@ -1,8 +1,8 @@
 public class Task {
-    private String taskName;
-    private String description;
-    private int id;
-    private StatusOfCase status;
+    protected String taskName;
+    protected String description;
+    protected int id;
+    protected StatusOfCase status;
 
     public Task(String taskName, String description, int id, StatusOfCase status) {
         this.taskName = taskName;
@@ -10,6 +10,11 @@ public class Task {
         this.id = id;
         this.status = status;
     }
+   /* public Task(String taskName, String description, StatusOfCase status) {
+        this.taskName = taskName;
+        this.description = description;
+        this.status = status;
+    }*/
 
     @Override
     public String toString() {
@@ -37,11 +42,11 @@ public class Task {
         this.description = description;
     }
 
-    public int getid() {
+    public int getId() {
         return id;
     }
 
-    public void setid(int id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -52,10 +57,5 @@ public class Task {
     public void setStatus(StatusOfCase status) {
         this.status = status;
     }
-    public void setChengeTask(Task newTask){
-        this.taskName = newTask.getTaskName();
-        this.description = newTask.getDescription();
-        this.id = newTask.getid();
-        this.status = newTask.getStatus();
-    }
+
 }
